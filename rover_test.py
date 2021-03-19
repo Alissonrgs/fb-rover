@@ -20,7 +20,7 @@ class RoverTest(unittest.TestCase):
         self.assertEqual(self.rover.plateau, self.plateau)
 
     def test_rover_create_with_wrong_coordinates_input(self):
-        rover_data = ['0', 0, 'N', self.plateau]
+        rover_data = ['a', 0, 'N', self.plateau]
 
         with self.assertRaises(AssertionError):
             Rover(*rover_data)

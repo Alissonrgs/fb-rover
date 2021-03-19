@@ -13,8 +13,8 @@ class Rover(object):
         error_message = \
             'The coordinates of the rover must be integers, the orientation ' \
             'must be a string with one of these letters "N", "E", "S", "W"'
-        assert isinstance(x, int), error_message
-        assert isinstance(y, int), error_message
+        assert (isinstance(x, str) and x.isdigit()) or isinstance(x, int), error_message
+        assert (isinstance(y, str) and y.isdigit()) or isinstance(y, int), error_message
         assert isinstance(o, str) and o in ORIENTATION, error_message
 
         self.x = int(x)
